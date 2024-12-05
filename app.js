@@ -10,6 +10,6 @@ const index = require("./routes/index");
 
 app.use("/", index);
 
-const PORT = 1981;
+const PORT = 3;
 
 app.listen(PORT, () => console.log(`running on port ${PORT}!`));
