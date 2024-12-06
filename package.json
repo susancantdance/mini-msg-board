@@ -5,6 +5,6 @@
     "express-async-handler": "^1.2.0"
   },
   "scripts": {
-    "start": "npm run start"
+    "start": "node app.js"
   }
 }
