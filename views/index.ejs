@@ -8,10 +8,9 @@
     <p><a href="/new">New Message</a></p>
     <ul>
       <p>Current Messages:</p>
-      <% messages.forEach((msg) => { %>
+      <% messages.map((msg) => { %>
       <li>User: <%= msg.user %></li>
       <li>Text: <%= msg.text %></li>
-      <li>Date: <%= msg.date %></li>
       <a href="/singlemsg?user=<%= msg.user %>">See message</a>
       <li>-------</li>
       <% }); %>

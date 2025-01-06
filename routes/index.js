@@ -3,6 +3,7 @@ const index = Router();
 const db = require("../db/queries");
 const singleMsgController = require("../controllers/singlemsg");
 const messages = db.getAllMessages();
+console.log(`messages: ${messages}`);
 
 index.get("/", (req, res) => {
   res.render("index", { messages: messages });
