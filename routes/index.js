@@ -1,7 +1,8 @@
 const { Router } = require("express");
 const index = Router();
+const db = require("../db/queries");
 const singleMsgController = require("../controllers/singlemsg");
-const messages = require("../messages");
+const messages = db.getAllMessages();
 
 index.get("/", (req, res) => {
   res.render("index", { messages: messages });
