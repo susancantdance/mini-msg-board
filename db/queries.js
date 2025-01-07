@@ -2,9 +2,9 @@ const pool = require("./pool");
 
 async function getAllMessages() {
   const { rows } = await pool.query("SELECT * FROM messages");
-  console.log(`rows is ${rows}`);
-  console.log(`row 0 is ${rows[0].username}`);
-  console.log(`row 1 is ${rows[1].username}`);
+  //   console.log(`rows is ${rows}`);
+  //   console.log(`row 0 is ${rows[0].username}`);
+  //   console.log(`row 1 is ${rows[1].username}`);
   return rows;
 }
 
