@@ -9,9 +9,9 @@
     <ul>
       <p>Current Messages:</p>
       <% messages.map((msg) => { %>
-      <li>User: <%= msg.user %></li>
+      <li>User: <%= msg.username %></li>
       <li>Text: <%= msg.text %></li>
-      <a href="/singlemsg?user=<%= msg.user %>">See message</a>
+      <a href="/singlemsg?username=<%= msg.username %>">See message</a>
       <li>-------</li>
       <% }); %>
     </ul>

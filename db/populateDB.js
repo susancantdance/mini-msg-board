@@ -6,11 +6,11 @@ require("dotenv").config();
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  user VARCHAR ( 255 ),
-  text VARCHAR
+  username VARCHAR ( 255 ),
+  text VARCHAR ( 255 )
 );
 
-INSERT INTO messages (user) 
+INSERT INTO messages (username) 
 VALUES
   ('Bryan'),
   ('Odin'),
@@ -20,7 +20,7 @@ VALUES
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: process.env.DB_URL,
+    connectionString: "postgresql://susanchen:w1thj0y!@localhost:5432/testing",
   });
   await client.connect();
   await client.query(SQL);
