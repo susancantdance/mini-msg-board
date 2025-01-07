@@ -10,11 +10,11 @@ CREATE TABLE IF NOT EXISTS messages (
   text VARCHAR ( 255 )
 );
 
-INSERT INTO messages (username) 
+INSERT INTO messages (username, text) 
 VALUES
-  ('Bryan'),
-  ('Odin'),
-  ('Damon');
+  ('Bryan', 'farting'),
+  ('Odin', 'pooping'),
+  ('Damon', 'peeing');
 `;
 
 async function main() {
